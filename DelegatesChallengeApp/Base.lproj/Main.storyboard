@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="DelegatesChallengeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +16,76 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ytq-GJ-iOI">
+                                <rect key="frame" x="120" y="173" width="407" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBJ-te-6EW">
+                                <rect key="frame" x="120" y="250" width="407" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ZIp Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61e-Iv-AVM">
+                                <rect key="frame" x="5" y="100" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cash" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gK2-Rb-xYp">
+                                <rect key="frame" x="5" y="176" width="85" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lockable" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBe-9L-zJ5">
+                                <rect key="frame" x="5" y="254" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-eG-Xng">
+                                <rect key="frame" x="120" y="96" width="407" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="76C-d8-QJa">
+                                <rect key="frame" x="535" y="249" width="51" height="31"/>
+                                <connections>
+                                    <action selector="enableTextField:" destination="vXZ-lx-hvc" eventType="valueChanged" id="JX8-Wg-z3Z"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ytq-GJ-iOI" firstAttribute="leading" secondItem="gK2-Rb-xYp" secondAttribute="trailing" constant="30" id="0gh-W6-q6g"/>
+                            <constraint firstItem="Lz8-eG-Xng" firstAttribute="leading" secondItem="61e-Iv-AVM" secondAttribute="trailing" constant="30" id="1av-1j-agh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ytq-GJ-iOI" secondAttribute="trailing" constant="57" id="2XH-wz-LFr"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="76C-d8-QJa" secondAttribute="bottom" constant="320" id="48h-Vp-b2P"/>
+                            <constraint firstItem="gK2-Rb-xYp" firstAttribute="top" secondItem="61e-Iv-AVM" secondAttribute="bottom" constant="55" id="4uu-nW-LiR"/>
+                            <constraint firstItem="lBe-9L-zJ5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-11" id="5dq-H0-5hu"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sBJ-te-6EW" secondAttribute="bottom" constant="320" id="9N3-CB-DLr"/>
+                            <constraint firstItem="ytq-GJ-iOI" firstAttribute="top" secondItem="Lz8-eG-Xng" secondAttribute="bottom" constant="47" id="D7j-UO-GIL"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="lBe-9L-zJ5" secondAttribute="bottom" constant="325" id="PRF-eC-5i7"/>
+                            <constraint firstItem="76C-d8-QJa" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="UKI-zC-bpn"/>
+                            <constraint firstItem="gK2-Rb-xYp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-11" id="X6H-On-KG1"/>
+                            <constraint firstItem="sBJ-te-6EW" firstAttribute="top" secondItem="ytq-GJ-iOI" secondAttribute="bottom" constant="47" id="dnG-Rh-dXP"/>
+                            <constraint firstItem="sBJ-te-6EW" firstAttribute="leading" secondItem="lBe-9L-zJ5" secondAttribute="trailing" constant="30" id="gUy-0E-KIB"/>
+                            <constraint firstItem="76C-d8-QJa" firstAttribute="top" secondItem="ytq-GJ-iOI" secondAttribute="bottom" constant="46" id="hKj-bQ-cDo"/>
+                            <constraint firstItem="61e-Iv-AVM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-11" id="lyK-C0-Lhr"/>
+                            <constraint firstItem="lBe-9L-zJ5" firstAttribute="top" secondItem="gK2-Rb-xYp" secondAttribute="bottom" constant="57" id="qeC-ft-vNR"/>
+                            <constraint firstItem="76C-d8-QJa" firstAttribute="leading" secondItem="sBJ-te-6EW" secondAttribute="trailing" constant="8" id="tg9-ys-djf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lz8-eG-Xng" secondAttribute="trailing" constant="57" id="zIh-zv-K3m"/>
+                            <constraint firstItem="Lz8-eG-Xng" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="76" id="ziV-gU-W89"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cashTextField" destination="ytq-GJ-iOI" id="p2a-8b-OCf"/>
+                        <outlet property="lockableTextField" destination="sBJ-te-6EW" id="iJw-VJ-fPQ"/>
+                        <outlet property="switch" destination="76C-d8-QJa" id="8se-4M-3iZ"/>
+                        <outlet property="zipcodeTextField" destination="Lz8-eG-Xng" id="JVs-b5-tro"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
